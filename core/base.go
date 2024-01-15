@@ -1230,7 +1230,8 @@ func (app *BaseApp) initLogger() error {
 				for _, l := range logs {
 					model.MarkAsNew()
 					// note: using pseudorandom for a slightly better performance
-					model.Id = security.PseudorandomStringWithAlphabet(models.DefaultIdLength, models.DefaultIdAlphabet)
+					// !CHANGED: id changed to snowflake
+					model.Id = security.RandomSnowflakeId()
 					model.Level = int(l.Level)
 					model.Message = l.Message
 					model.Data = l.Data

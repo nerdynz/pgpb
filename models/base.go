@@ -100,7 +100,7 @@ func (m *BaseModel) GetUpdated() types.DateTime {
 //
 // The generated id is a cryptographically random 15 characters length string.
 func (m *BaseModel) RefreshId() {
-	m.Id = security.RandomStringWithAlphabet(DefaultIdLength, DefaultIdAlphabet)
+	m.Id = security.RandomSnowflakeId()
 }
 
 // RefreshCreated updates the model Created field with the current datetime.
