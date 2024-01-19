@@ -1,4 +1,4 @@
-module github.com/pocketbase/pocketbase
+module github.com/krismcfarlin/postgresbase
 
 go 1.21
 
