@@ -8,14 +8,14 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v5"
+	"github.com/nerdynz/pgpb/apis"
+	"github.com/nerdynz/pgpb/core"
+	"github.com/nerdynz/pgpb/daos"
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/tests"
+	"github.com/nerdynz/pgpb/tools/hook"
+	"github.com/nerdynz/pgpb/tools/subscriptions"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
 )
 
 func TestRealtimeConnect(t *testing.T) {

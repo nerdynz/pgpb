@@ -10,15 +10,15 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v5"
+	"github.com/nerdynz/pgpb/core"
+	"github.com/nerdynz/pgpb/forms"
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/resolvers"
+	"github.com/nerdynz/pgpb/tools/rest"
+	"github.com/nerdynz/pgpb/tools/routine"
+	"github.com/nerdynz/pgpb/tools/search"
+	"github.com/nerdynz/pgpb/tools/subscriptions"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/resolvers"
-	"github.com/pocketbase/pocketbase/tools/rest"
-	"github.com/pocketbase/pocketbase/tools/routine"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
 	"github.com/spf13/cast"
 )
 
@@ -64,7 +64,7 @@ func (api *realtimeApi) connect(c echo.Context) error {
 
 	c.Response().Header().Set("Content-Type", "text/event-stream")
 	c.Response().Header().Set("Cache-Control", "no-store")
-	// https://github.com/pocketbase/pocketbase/discussions/480#discussioncomment-3657640
+	// https://github.com/nerdynz/pgpb/discussions/480#discussioncomment-3657640
 	// https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffering
 	c.Response().Header().Set("X-Accel-Buffering", "no")
 

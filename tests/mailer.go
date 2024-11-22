@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/pocketbase/pocketbase/tools/mailer"
+	"github.com/nerdynz/pgpb/tools/mailer"
 )
 
 var _ mailer.Mailer = (*TestMailer)(nil)

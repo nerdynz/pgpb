@@ -3,6 +3,7 @@
 package core
 
 import (
+	"log/slog"
 	"os"
 	"strings"
 
@@ -12,7 +13,11 @@ import (
 
 func connectDB(dbPath string) (*dbx.DB, error) {
 	if strings.Contains(dbPath, "logs.db") {
-		return dbx.MustOpen("postgres", os.Getenv("LOGS_DATABASE"))
+		logdb := os.Getenv("LOGS_DATABASE")
+		slog.Info("logdb", "logdb", logdb)
+		return dbx.MustOpen("postgres", logdb)
 	}
-	return dbx.MustOpen("postgres", os.Getenv("DATABASE"))
+	db := os.Getenv("DATABASE")
+	slog.Info("db", "db", db)
+	return dbx.MustOpen("postgres", db)
 }

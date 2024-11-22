@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/tools/search"
+	"github.com/nerdynz/pgpb/tools/search"
 )
 
 func TestSortFieldBuildExpr(t *testing.T) {

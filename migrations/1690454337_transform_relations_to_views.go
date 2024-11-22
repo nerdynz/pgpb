@@ -1,14 +1,14 @@
 package migrations
 
 import (
+	"github.com/nerdynz/pgpb/daos"
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/models/schema"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
 )
 
 // Transform the relation fields to views from non-view collections to json or text fields
-// (see https://github.com/pocketbase/pocketbase/issues/3000).
+// (see https://github.com/nerdynz/pgpb/issues/3000).
 func init() {
 	AppMigrations.Register(func(db dbx.Builder) error {
 		dao := daos.New(db)

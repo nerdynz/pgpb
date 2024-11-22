@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/nerdynz/pgpb/daos"
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/tools/dbutils"
+	"github.com/nerdynz/pgpb/tools/list"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tools/dbutils"
-	"github.com/pocketbase/pocketbase/tools/list"
 )
 
 // Adds _collections indexes column (if not already).

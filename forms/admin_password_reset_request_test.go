@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/nerdynz/pgpb/forms"
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/tests"
 )
 
 func TestAdminPasswordResetRequestValidateAndSubmit(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/nerdynz/pgpb/tools/list"
+	"github.com/nerdynz/pgpb/tools/types"
 )
 
 func TestSubtractSliceString(t *testing.T) {

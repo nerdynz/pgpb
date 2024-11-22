@@ -5,9 +5,9 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models/settings"
+	"github.com/nerdynz/pgpb/core"
+	"github.com/nerdynz/pgpb/forms"
+	"github.com/nerdynz/pgpb/models/settings"
 )
 
 // bindSettingsApi registers the settings api endpoints.

@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/models/schema"
+	"github.com/nerdynz/pgpb/tools/list"
+	"github.com/nerdynz/pgpb/tools/types"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/types"
 )
 
 func TestNewRecord(t *testing.T) {

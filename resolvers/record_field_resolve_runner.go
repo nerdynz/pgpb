@@ -6,13 +6,13 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/models/schema"
+	"github.com/nerdynz/pgpb/tools/inflector"
+	"github.com/nerdynz/pgpb/tools/list"
+	"github.com/nerdynz/pgpb/tools/search"
+	"github.com/nerdynz/pgpb/tools/security"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/security"
 )
 
 // parseAndRun starts a new one-off RecordFieldResolver.Resolve execution.
@@ -455,7 +455,7 @@ func (r *runner) processActiveProps() (*search.ResolverResult, error) {
 
 			// wrap in json_extract to ensure that top-level primitives
 			// stored as json work correctly when compared to their SQL equivalent
-			// (https://github.com/pocketbase/pocketbase/issues/4068)
+			// (https://github.com/nerdynz/pgpb/issues/4068)
 			if field.Type == schema.FieldTypeJson {
 				result.NoCoalesce = true
 				result.Identifier = jsonExtract(r.activeTableAlias+"."+cleanFieldName, "")

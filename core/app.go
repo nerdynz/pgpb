@@ -7,14 +7,14 @@ import (
 	"context"
 	"log/slog"
 
+	"github.com/nerdynz/pgpb/daos"
+	"github.com/nerdynz/pgpb/models/settings"
+	"github.com/nerdynz/pgpb/tools/filesystem"
+	"github.com/nerdynz/pgpb/tools/hook"
+	"github.com/nerdynz/pgpb/tools/mailer"
+	"github.com/nerdynz/pgpb/tools/store"
+	"github.com/nerdynz/pgpb/tools/subscriptions"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models/settings"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/mailer"
-	"github.com/pocketbase/pocketbase/tools/store"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
 )
 
 // App defines the main PocketBase app interface.

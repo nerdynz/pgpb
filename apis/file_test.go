@@ -11,12 +11,12 @@ import (
 	"testing"
 
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/nerdynz/pgpb/apis"
+	"github.com/nerdynz/pgpb/core"
+	"github.com/nerdynz/pgpb/daos"
+	"github.com/nerdynz/pgpb/models/schema"
+	"github.com/nerdynz/pgpb/tests"
+	"github.com/nerdynz/pgpb/tools/types"
 )
 
 func TestFileToken(t *testing.T) {

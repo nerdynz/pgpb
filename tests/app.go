@@ -9,8 +9,8 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/mailer"
+	"github.com/nerdynz/pgpb/core"
+	"github.com/nerdynz/pgpb/tools/mailer"
 )
 
 // TestApp is a wrapper app instance used for testing.

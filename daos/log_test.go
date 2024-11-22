@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/nerdynz/pgpb/models"
+	"github.com/nerdynz/pgpb/tests"
+	"github.com/nerdynz/pgpb/tools/types"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
 )
 
 func TestLogQuery(t *testing.T) {

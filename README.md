@@ -40,7 +40,7 @@ docker-compose up -d
 
 # run the project with postgres connection info
 CGO_ENABLED=0 go build -tags pq -o server \
-    github.com/pocketbase/pocketbase/examples/base \
+    github.com/nerdynz/pgpb/examples/base \
     env \
     LOGS_DATABASE="postgresql://user:pass@localhost/logs?sslmode=disable" \
     DATABASE="postgresql://user:pass@localhost/postgres?sslmode=disable" \
